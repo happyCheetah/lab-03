@@ -36,10 +36,10 @@ def get_inbox(recipient: str) -> None:
 	Find out emails sent by a specific recipient by making a get request to the mail/inbox/		{recipient} endpoint.
 	
 	Args:
-	'recipient': recipient
+	    recipient (str): recipient
 	
 	Returns:
-	no return 
+	    No return 
     """
     response = requests.get(f'{SERVER}/mail/inbox/{recipient}')
     pprint.pprint(response.json())
@@ -47,13 +47,13 @@ def get_inbox(recipient: str) -> None:
 def get_sent(sender: str) -> None:
     """TODO: fill out this docstring (using the send_mail docstring as a guide)
 	summary: 
-	Find out emails sent by a specific sender by making a get request to the mail/sent/		{sender} endpoint.
+	    Find out emails sent by a specific sender by making a get request to the mail/sent/		{sender} endpoint.
 	
 	Args:
-	'sender': sender
+	    sender (str): sender
 	
 	Returns:
-	no return 
+	    No return 
     """
     response = requests.get(f'{SERVER}/mail/sent/{sender}')
     pprint.pprint(response.json())
@@ -61,13 +61,13 @@ def get_sent(sender: str) -> None:
 def get_mail(mail_id: str) -> None:
     """TODO: fill out this docstring (using the send_mail docstring as a guide)
 	summary: 
-	Find out an email with a specific ID by making a get request to the mail/{mail_id} endpoint.
+	    Find out an email with a specific ID by making a get request to the mail/{mail_id} endpoint.
 	
 	Args:
-	'mail_id': mail_id
+	    mail_id (str): mail_id
 	
 	Returns:
-	no return 
+	    No return 
     """
     response = requests.get(f'{SERVER}/mail/{mail_id}')
     pprint.pprint(response.json())
@@ -75,13 +75,13 @@ def get_mail(mail_id: str) -> None:
 def delete_mail(mail_id: str) -> None:
     """TODO: fill out this docstring (using the send_mail docstring as a guide)
 	summary: 
-	Delete an email with a specific ID by making a delete request to the mail/{mail_id} endpoint.
+	    Delete an email with a specific ID by making a delete request to the mail/{mail_id} endpoint.
 	
 	Args:
-	'mail_id': mail_id
+	    mail_id (str): mail_id
 	
 	Returns:
-	no return 
+	    No return 
     """
     response = requests.delete(f'{SERVER}/mail/{mail_id}')
     pprint.pprint(response.json())
