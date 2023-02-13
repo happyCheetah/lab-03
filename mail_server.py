@@ -80,7 +80,7 @@ def get_mail(mail_id: str) -> Optional[Dict[str, str]]:
         mail_id (str): a string that identifies a piece of mail
 
     Returns:
-       optional[Dict[str, str]]: should there be multiplie matches, all matches will be returned in the form of a list 
+       optional[Dict[str, str]]: should there be multiple matches, all matches will be returned in the form of a list 
     """
     mail = load_mail()
     for entry in mail:
@@ -96,8 +96,8 @@ def get_inbox(recipient: str) -> List[Dict[str, str]]:
     Args:
         recipient (str): a string that identifies the recipient in question
 
-    ReturnsSummary:
-A
+    Return Summary:
+        List[Dict[str,str]]: returns list of all relevant mail
 
 """
     mail = load_mail()
@@ -110,6 +110,14 @@ A
 
 def get_sent(sender: str) -> List[Dict[str, str]]:
     """TODO: fill out this docstring (using the load_mail docstring as a guide)
+    Summary: returns list of mail from specified sender
+
+    Args:
+        sender (str): a string that identifies the sender question
+
+    Return Summary:
+        List[Dict[str,str]]: returns list of all relevant mail
+
     """
     mail = load_mail()
     sent = []
